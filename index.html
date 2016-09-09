@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head lang="en">
+  <meta charset="UTF-8">
+
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../styles/blogPage.css">
+  <title>MEAN Cats App</title>
+</head>
+
+<body>
+<div class="container">
+  <div class="col-lg-12">
+    <h1>Ben Margis</h1>
+  </div>
+</div>
+
+<div class="container">
+  <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+    <h2>Junior Web Developer</h2>
+  </div>
+  <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+    <ul class="nav nav-pills">
+      <li class="main-nav active"><a href="#" class="main-link">HOME</a></li>
+      <li class="main-nav"><a href="#" class="main-link">PROJECTS</a></li>
+      <li class="main-nav"><a href ng-click="showAbout" class="main-link">ABOUT</a></li>
+
+      <li role="presentation" class="dropdown">
+        <a class="main-nav dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+          CONTACT <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <a href="#">two</a>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="container main-line">
+  <div class="col-lg-12">
+  </div>
+</div>
+
+<div class="container" ng-controller="showAbout">
+  <div class="col-lg-12">
+    <h1>About Ben Margis</h1>
+  </div>
+</div>
+
+
+<!-- -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; Main Paragraph -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+
+<div class="container">
+  <div class="col-lg-9 col-md-8 col-sm-12 col-xs-12">
+    <!--this is your intro paragraph - dont add this again-->
+    <p class="main-p">My name is, as you can see above, Ben Margis. I'm starting this page as way to chronicle my progress as a web developer. dncksdvn ncdsnv snv ndsklv sdln d  slvm sm mkslv fnsv vnklv kclsnvklv nvfkvn nvjfnv nsoirg smsdp ncdk nvih vfl fdanf dghtna thea cajd eos but a man in a garabbacg machine and he am eoeat ing ans dssdm nci soa sknvdral and the ,ncdsn ncsidn n ndjskds</p>
+
+    <!--This is the content that you are repeating-->
+    <div class="col-lg-9 col-md-8 col-sm-12 col-xs-12">
+      <h3>Project Title and Date <span class="blue"> 9/3/2017</span></h3>
+      <img class="scrnshot" src="../assets/images/screen_aug_10.png" alt="Aug 10th screenshot">
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12">
+      <p class="side-p main-p"> A brief description of what you did, learned about, what are you doing next? Do a little research onthe topic and state waht you learned.
+      </p>
+    </div>
+    <!--This is the secondary Blue line-->
+    <div class="secondary-line col-lg-12">
+    </div>
+    <!--&#45;&#45;  End Repetition-->
+
+
+    <!--This is the content that you are repeating-->
+    <div class="col-lg-9 col-md-8 col-sm-12 col-xs-12">
+      <h3>Project Title and Date <span class="blue"> 9/3/2017</span></h3>
+      <img class="scrnshot" src="../assets/images/screen_aug_10.png" alt="Aug 10th screenshot">
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12">
+      <p class="side-p main-p"> A brief description of what you did, learned about, what are you doing next? Do a little research onthe topic and state waht you learned.
+      </p>
+    </div>
+    <!--This is the secondary Blue line-->
+    <div class="secondary-line col-lg-12">
+    </div>
+    <!--&#45;&#45;  End Repetition-->
+
+
+
+
+  </div>
+
+  <!-- -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; Goals -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+
+  <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12">
+
+    <div ng-controller="IndexController">
+      <p ng-show="cat.name">Goals for the week of{{cat.name}}</p>
+      <h4 ng-hide="cat.name">Enter a new goal</h4>
+
+      <form novalidate>
+        <input class="field-goal" type="text" ng-model="cat.name"/><br/>
+        <input class="save-button" type="submit" ng-click="add(cat)" value="Save">
+      </form>
+
+      <h4>Goals</h4>
+      <ul class="goal-list">
+        <li ng-repeat="cat in cats">{{cat.name}}</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<footer class="contact-footer">
+  <ul class="footer-ul">
+    <li><a href="#" class="footer-links">Github</a></li>
+    <li><a href="#" class="footer-links">LinkedIn</a></li>
+    <li><a href="#" class="footer-links">Resume</a></li>
+    <li><a href="#" class="footer-links">margis.ben@gmail.com</a></li>
+  </ul>
+
+</footer>
+
+
+
+
+<script src="/vendors/angular/angular.min.js" type="text/javascript"></script>
+<script src="/assets/scripts/app.min.js" type="text/javascript"></script>
+</body>
+
+</html>
